@@ -1,0 +1,154 @@
+/* reset browser styles */
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp,small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1.2;
+}
+ol, ul {
+	list-style-type: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+} 
+/* end reset browser styles */
+
+/*Стили для всего документа*/
+body {
+	color: #ddf;
+	background: radial-gradient(at 16% center, rgba(30, 30, 150, .6), rgba(30, 30, 150, 1));
+	font-family: 'Oranienbaum', serif;
+	font-size: 16px;
+}
+* {
+	box-sizing: border-box;
+}
+/*Стили HEADER*/
+
+/*Стили меню навигации*/
+nav {
+	width: 18%;
+	height: 100%;
+	margin: 0;
+	margin-top: 1em;
+	float: left;
+	z-index: 100;
+}
+ul {
+	height: 100%;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+}
+
+li {
+	font-size: 1.1em;
+	font-family: 'Kelly Slab', cursive;
+	width: 3em;
+	height: 3em;
+	border-radius: 3em;
+	background-color: rgba(200, 200, 255, .1);
+	text-align: center;
+	padding-top: 1em;
+	cursor: pointer;
+}
+li:hover {
+	transform: scale(1.2);
+}
+.selected {
+	transform: scale(1.25);
+	box-shadow: 0 0 1.5em #fff;
+}
+
+/*Стили основного содержимого*/
+main {
+	margin-left: 18%;
+	height: 100%;
+	display: flex;
+	flex-direction: row-reverse;
+}
+/*Боковая панель в основном содержимом*/
+aside {
+	flex: 1 160px;
+	padding-right: 1%;
+	height: 100%;
+	overflow: auto;
+}
+#description img {
+	width: 100%;
+}
+ table {
+ 	margin-top: 1.5em;
+ 	font-family: 'Kelly Slab';
+ 	width: 100%;
+ }
+ #dynamic_auto table {
+ 	margin-top: 1em;
+ }
+caption {
+	height: 2em;
+	background-color: #ddf;
+	background-size: 2em;
+	background-repeat: no-repeat;
+	background-position: top left;
+	color: rgb(30, 30, 150);
+	font-size: 1.5em;
+	padding-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+#engine_auto caption {	
+	background-image: url(foto/engine.jpg);
+}
+#dynamic_auto caption {
+	background-image: url(foto/speed.jpg);
+}
+td:last-child {
+	width: 2em;
+	margin-left: 1%;
+}
+/*Центральное фото с подписью*/
+#img_auto {
+	flex: 4;
+	margin-right: 1%;
+}
+#img_auto img {	
+	margin: 5em 0 1em 0;
+	width: 90%;
+}
+figcaption {
+	width: 100%;
+	text-align: center;
+	font-family: 'Kelly Slab', cursive;
+	font-size: 1.2em;
+}
+/*Стили FOOTER*/
+
+
+@media (max-width: 1080px) {
+	#img_auto {
+		flex: 1;
+		align-content: center;
+	}
+	#img_auto img {
+		width: 80%;
+		margin: 0 0 1em 0;
+	}
+	#description img {
+		width: 80%;
+	}
+	main {
+		margin-left: 30%;
+	}
+}
